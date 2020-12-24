@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        background-image: url('bg1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .animated {
+        padding-top: 95px;
+        margin-bottom: 60px;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    @-webkit-keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateX(20px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .fadeInRight {
+        -webkit-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+    }
+
+    html {
+    font-size: 14px;
+    }
+
+    li {
+        margin-right: 15px;
+    }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  button {
+      min-width: 250px;
+      border-radius: 30px !important;
+      background-color: #DC3C4D;
+      min-height: 40px;
+      margin-bottom: 25px;
+      font-size: larger !important;
+  }
+  
+  .container {
+      margin-left: 10%;
+    max-width: 960px;
+  }
+  
+  .pricing-header {
+    max-width: 700px;
+  }
+  
+  .card-deck .card {
+    min-width: 220px;
+  }
+
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+</style>
+
+<body>
+    <div class="box-shadow" style=" box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05) !important;">
+        <nav class="navbar navbar-expand-lg navbar-dark my-2 my-lg-0 " style="background-color: #DC3C4D; font-weight: 600; font-size: larger;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Dwonload <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Documentation</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Donate</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                        <i class="fa fa-facebook-square" style="font-size:42px; color:white"></i>
+                    </li>
+                    <li class="nav-item active">
+                        <i class="fa fa-github-square"  style="font-size:42px; color:white"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container"  >
+        <div id="animated-example" class="animated fadeInRight">
+            <p style="color: white;
+            font-family: 'Mina', Sans-serif;
+            font-size: 6em;
+            font-weight: 800;
+            font-style: normal;
+            line-height: 1em;
+            letter-spacing: 0px;
+            ">
+                QuickMeetUper
+            <p>
+                <p style="color: white;
+                font-family: 'Mina', Sans-serif;
+                font-size: 1.7em;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 0px;
+                    ">
+                Simple and freee - online video chat App
+                </p>
+        </div>
+
+        <div style="display: inline-grid;">
+            <button type="button" class="btn btn-danger">Learn more   
+                <!-- <i class="fa fa-arrow-right" style="float: right; font-weight: 400;"></i> -->
+            </button>
+            <button type="button" class="btn btn-danger">Try now    
+                <!-- <i class="fa fa-arrow-right" style="float: right;  font-weight: 400 !important;"></i> -->
+            </button>
+        </div>
+       
+
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
