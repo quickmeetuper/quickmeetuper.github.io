@@ -37,9 +37,9 @@ html {
 
 
 .container {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     max-width: 960px;
-    height: 100vh;
+    height: 100%;
     /* height: calc(100vh - 62px); */
     padding-top: 62px;
 }
@@ -132,4 +132,19 @@ button {
 
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+
+
+/* ////////DIV CONTAINERS AUTO SCROLLING  */
+
+.scroll-snap-wrapper {
+	max-height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
+.element {
+    height: 100vh;
+	scroll-snap-align: start;
 }

@@ -61,58 +61,72 @@
         </nav>
     </div>
 
+    <div class="scroll-snap-wrapper">
 
-    <div id="home" class="container">
-        <div id="animated-example" class="animated fadeInRight">
-            <p style="color: white;
-                font-family: 'Mina', Sans-serif;
-                font-size: 6em;
-                font-weight: 800;
-                font-style: normal;
-                line-height: 1em;
-                letter-spacing: 0px;
-                ">
-                QuickMeetUper
-            <p>
-            <p style="color: white;
-                    font-family: 'Mina', Sans-serif;
-                    font-size: 1.7em;
-                    font-weight: 400;
-                    font-style: normal;
-                    letter-spacing: 0px;
+        <div class="element">
+            <div id="home" class="container" style="height: 100vh !important;">
+                <div id="animated-example" class="animated fadeInRight">
+                    <p style="color: white;
+                        font-family: 'Mina', Sans-serif;
+                        font-size: 6em;
+                        font-weight: 800;
+                        font-style: normal;
+                        line-height: 1em;
+                        letter-spacing: 0px;
                         ">
-                Simple and freee - online video chat App
-            </p>
+                        QuickMeetUper
+                    <p>
+                    <p style="color: white;
+                        font-family: 'Mina', Sans-serif;
+                        font-size: 1.7em;
+                        font-weight: 400;
+                        font-style: normal;
+                        letter-spacing: 0px;
+                            ">
+                        Simple and freee - online video chat App
+                    </p>
+                </div>
+
+                <div style="display: inline-grid;">
+                    <button type="button" class="mb25 btn btn-danger">Learn more
+                    </button>
+                    <button type="button" class="btn mb25 btn-danger">Try now
+                    </button>
+                </div>
+            </div>
+        </div>
+        ELO
+        <div class="element">
+            <div id="about" class="container element">
+                ABOUT
+            </div>
         </div>
 
-        <div style="display: inline-grid;">
-            <button type="button" class="mb25 btn btn-danger">Learn more
-                <!-- <i class="fa fa-arrow-right" style="float: right; font-weight: 400;"></i> -->
-            </button>
-            <button type="button" class="btn mb25 btn-danger">Try now
-                <!-- <i class="fa fa-arrow-right" style="float: right;  font-weight: 400 !important;"></i> -->
-            </button>
+        <div class="element">
+            <div id="download" class="container">
+                Dowload
+            </div>
         </div>
-    </div>
 
-    <div id="about" class="container">
-        ABOUT
-    </div>
+        <div class="element">
+            <div id="doc" class="container">
+                DOCC
+            </div>
+        </div>
 
-    <div id="download" class="container">
-        Dowload
-    </div>
+        <div class="element">
+            <div id="donate" class="container">
+                Donate
+            </div>
+        </div>
 
-    <div id="doc" class="container">
-        DOCC
-    </div>
+        <div class="element">
+            <div id="contact" class="container">
+                KONTAKT
+            </div>
+        </div>
 
-    <div id="donate" class="container">
-        Donate
     </div>
-
-    <div id="contact" class="container">
-        KONTAKT
     </div>
 
 
@@ -127,6 +141,23 @@
                 });
             });
         });
+
+        const gra = function (min, max) {
+            return Math.random() * (max - min) + min;
+        };
+        const init = function () {
+            let items = document.getElementsByClassName("element");
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.minHeight = gra(120, 205) + "vh";
+                items[i].style.background = randomColor({ luminosity: "light" });
+            }
+
+            cssScrollSnapPolyfill();
+        };
+        init();
+
+
+
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
