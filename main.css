@@ -80,10 +80,15 @@ background-color: white;
 
 
 .flex {
-    display: inline-flex;
+    display:list-item;
     width: 50%;
     font-size: 20px;
-    list-style-type: circle;
+    list-style: circle;
+    list-style-position: inside;
+}
+.option-container .list-type {
+    font-size: 20px;
+    list-style: circle;
     list-style-position: inside;
 }
 #download {

@@ -34,19 +34,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="index.html#about">About</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#download">Dwonload <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html#screen">Screen</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#doc">Documentation</a>
+                        <a class="nav-link" href="index.html#download">Dwonload <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#donate">Donate</a>
+                        <a class="nav-link" href="documentation.html">Documentation</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="index.html#donate">Donate</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
                     </li>
 
                     <li class="nav-item active">
@@ -67,92 +70,50 @@
     <div class="scroll-snap-wrapper">
 
         <div class="element">
-            <div id="home-bg">
-                <div id="home" class="container" style="height: 100vh !important;">
-                    <div id="animated-example" class="animated fadeInRight">
-                        <p style="color: white;
-                        font-family: 'Mina', Sans-serif;
-                        font-size: 6em;
-                        font-weight: 800;
-                        font-style: normal;
-                        line-height: 1em;
-                        letter-spacing: 0px;
-                        ">
-                            MeetUper
-                        <p>
-                        <p style="color: white;
-                        font-family: 'Mina', Sans-serif;
-                        font-size: 1.7em;
-                        font-weight: 400;
-                        font-style: normal;
-                        letter-spacing: 0px;
-                            ">
-                            Simple and freee - online video chat App
-                        </p>
-                    </div>
-
-                    <div style="display: inline-grid;">
-                        <button type="button" class="mb25 btn btn-danger">Learn more
-                        </button>
-                        <button type="button" class="btn mb25 btn-danger">Try now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="element">
             <div id="about-bg">
                 <div id="about" class="container element">
                      <div class="container-body">
                     <div>
                         <div class="left-section">
-<span>
-                                Pobierz zipa. Pózniej trzeba go będzie rozpoakować i wgrac na serwer.<br/>
-                                Znajdują się tam libki które umożliwiają uruchomienie aplikacji na systemie Linux, gdzie wersja Node to 12.<br/>
-                                Poniżej przedstawimy możliwą instalację, korzystając z Heroku (serwera, który udostępnia nam dużo możliwości i przy pomocy Atlas Mongo(bazy danych potrzebnej do działania aplikacji)<br/>
-
-                                Najpier możemy założyć sobie bazę danych Mongo. Możemy to zrobić wchodząc na atlas.mongo.pl <br/>
-
-                                Następnie zakładamy konto na heroku, tworzymy sobie nową stronę.<br/>
-                                Ustawiamy sobie Reveal Config: takie jak Path, Node_env, Mongo_URI pobrane z wcześniej utworzonej bazy.<br/>
-                                Ustawiamy buildPacka<br/>
-                                Pobieramy heroku CLI zgodnie z instrukcją:<br/>
-                                Kiedy mamy już folder z naszą aplikacja, tam rozpakowujemy zipa, tak aby w głównym folderze był plik Procfile.<br/>
-                                Wgrywamy tak jak napisano w instrukcji heroku: git add. git commit i git push heroku master<br/>
-                                Ważne żeby przed tym upewnić się że ustawiliśmy BuildPacka i Reveal Config.<br/>
-</span>
+                            <h1>Dokumentacja</h1>
+                            <h2>1. Pobranie plików</h2>
+                            Pobierz zipa. Pózniej trzeba go będzie rozpoakować i wgrac na serwer.<br/>
+                            Znajdują się tam libki które umożliwiają uruchomienie aplikacji na systemie Linux, gdzie wersja Node to 12.<br/>
+                            Poniżej przedstawimy możliwą instalację, korzystając z Heroku (serwera, który udostępnia nam dużo możliwości i przy pomocy Atlas Mongo(bazy danych potrzebnej do działania aplikacji)<br/>
+                            <h2>2. Utworzenie darmowej bazy MongoDb przy pomocy </h2>
+                            <ul>
+                                <li>
+                                    Tworzymy konto wchodząc na link: <a target="_blank" href="https://account.mongodb.com/account/register">https://account.mongodb.com/account/register</a>
+                                </li>
+                                <li>
+                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierowac jak to zrobić</a>
+                                </li>
+                                <li>Czekamy, aż stworzy się klaster</li>
+                            </ul>
+                            Najpier możemy założyć sobie bazę danych Mongo. Możemy to zrobić wchodząc na atlas.mongo.pl <br/>
+                            <h2>2. Utworzenie darmowego konta na Heroku </h2>
+                            <ul>
+                                <li>
+                                    Tworzymy konto wchodząc na link: <a target="_blank" href="https://account.mongodb.com/account/register">https://account.mongodb.com/account/register</a>
+                                </li>
+                                <li>
+                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierowac jak to zrobić</a>
+                                </li>
+                                <li>Czekamy, aż stworzy się klaster</li>
+                            </ul>
+                            Następnie zakładamy konto na heroku, tworzymy sobie nową stronę.<br/>
+                            Ustawiamy sobie Reveal Config: takie jak Path, Node_env, Mongo_URI pobrane z wcześniej utworzonej bazy.<br/>
+                            Ustawiamy buildPacka<br/>
+                            Pobieramy heroku CLI zgodnie z instrukcją:<br/>
+                            Kiedy mamy już folder z naszą aplikacja, tam rozpakowujemy zipa, tak aby w głównym folderze był plik Procfile.<br/>
+                            Wgrywamy tak jak napisano w instrukcji heroku: git add. git commit i git push heroku master<br/>
+                            Ważne żeby przed tym upewnić się że ustawiliśmy BuildPacka i Reveal Config.<br/>
+                            </span>
 
                         </div>
-                        <div class="right-section">
-
-                         </div>
                     </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="element">
-            <div id="download" class="container">
-                <div class="container-body">
-                    <h1> </h1>
-                    <button type="button" class="mb25 btn btn-danger">download .exe
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="element">
-            <div id="doc" class="container">
-                <a href="documentation.html" type="button" class="mb25 btn btn-danger">go to documentation</a>
-            </div>
-        </div>
-
-        <div class="element">
-            <div id="donate" class="container">
-                <button type="button" class="mb25 btn btn-danger">donate
-
             </div>
         </div>
 
