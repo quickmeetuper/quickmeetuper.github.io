@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+
+</style>
+
+<body>
+    <div class="box-shadow top-nav_fixed" style=" box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05) !important;">
+        <nav class="navbar navbar-expand-lg navbar-dark my-0 my-lg-0 "
+            style="background-color: #006392; font-weight: 600; font-size: larger;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div style="color: white ;
+            font-family: 'Mina', Sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+            font-style: normal;
+            letter-spacing: 0px;">
+                <a style="color: white;" class="nav-link" href="#home">MeetUper</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#download">Dwonload <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#doc">Documentation</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#donate">Donate</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="https://www.facebook.com/Quick-MeetUper-100364615331405" target="_blank">
+                            <i class="fa fa-facebook-square" style="font-size:42px; color:white"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <i class="fa fa-github-square" style="font-size:42px; color:white"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="scroll-snap-wrapper">
+
+        <div class="element">
+            <div id="home-bg">
+                <div id="home" class="container" style="height: 100vh !important;">
+                    <div id="animated-example" class="animated fadeInRight">
+                        <p style="color: white;
+                        font-family: 'Mina', Sans-serif;
+                        font-size: 6em;
+                        font-weight: 800;
+                        font-style: normal;
+                        line-height: 1em;
+                        letter-spacing: 0px;
+                        ">
+                            MeetUper
+                        <p>
+                        <p style="color: white;
+                        font-family: 'Mina', Sans-serif;
+                        font-size: 1.7em;
+                        font-weight: 400;
+                        font-style: normal;
+                        letter-spacing: 0px;
+                            ">
+                            Simple and freee - online video chat App
+                        </p>
+                    </div>
+
+                    <div style="display: inline-grid;">
+                        <button type="button" class="mb25 btn btn-danger">Learn more
+                        </button>
+                        <button type="button" class="btn mb25 btn-danger">Try now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="element">
+            <div id="about-bg">
+                <div id="about" class="container element">
+                     <div class="container-body">
+                    <div>
+                        <div class="left-section">
+<span>
+                                Pobierz zipa. Pózniej trzeba go będzie rozpoakować i wgrac na serwer.<br/>
+                                Znajdują się tam libki które umożliwiają uruchomienie aplikacji na systemie Linux, gdzie wersja Node to 12.<br/>
+                                Poniżej przedstawimy możliwą instalację, korzystając z Heroku (serwera, który udostępnia nam dużo możliwości i przy pomocy Atlas Mongo(bazy danych potrzebnej do działania aplikacji)<br/>
+
+                                Najpier możemy założyć sobie bazę danych Mongo. Możemy to zrobić wchodząc na atlas.mongo.pl <br/>
+
+                                Następnie zakładamy konto na heroku, tworzymy sobie nową stronę.<br/>
+                                Ustawiamy sobie Reveal Config: takie jak Path, Node_env, Mongo_URI pobrane z wcześniej utworzonej bazy.<br/>
+                                Ustawiamy buildPacka<br/>
+                                Pobieramy heroku CLI zgodnie z instrukcją:<br/>
+                                Kiedy mamy już folder z naszą aplikacja, tam rozpakowujemy zipa, tak aby w głównym folderze był plik Procfile.<br/>
+                                Wgrywamy tak jak napisano w instrukcji heroku: git add. git commit i git push heroku master<br/>
+                                Ważne żeby przed tym upewnić się że ustawiliśmy BuildPacka i Reveal Config.<br/>
+</span>
+
+                        </div>
+                        <div class="right-section">
+
+                         </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="element">
+            <div id="download" class="container">
+                <div class="container-body">
+                    <h1> </h1>
+                    <button type="button" class="mb25 btn btn-danger">download .exe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="element">
+            <div id="doc" class="container">
+                <a href="documentation.html" type="button" class="mb25 btn btn-danger">go to documentation</a>
+            </div>
+        </div>
+
+        <div class="element">
+            <div id="donate" class="container">
+                <button type="button" class="mb25 btn btn-danger">donate
+
+            </div>
+        </div>
+
+        <div class="element">
+            <div id="contact" class="container">
+                <h1> ekipa.melansz@gmail.com</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Created by Studio Ekipa Melansz © ekipa.melansz@gmail.com
+    </div>
+
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const gra = function (min, max) {
+            return Math.random() * (max - min) + min;
+        };
+        const init = function () {
+            let items = document.getElementsByClassName("element");
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.minHeight = gra(100, 100) + "vh";
+            }
+
+            cssScrollSnapPolyfill();
+        };
+        init();
+
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

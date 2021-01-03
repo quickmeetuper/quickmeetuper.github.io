@@ -1,7 +1,7 @@
 /* DEF COLOR BLUE - #006392 */
 
 body {
-    color: white !important;
+    color: white;
     font-family: 'Mina', Sans-serif;
 }
 
@@ -32,8 +32,8 @@ html {
     /* text-shadow: 1px 2px 7px black !important; */
 }
 
-#about h1, h2 {
-    color: #006392;
+#about .container-body h1, h2 {
+    color: #006392 !important;
     /* text-shadow: 1px 2px 7px black !important; */
 }
 
@@ -55,7 +55,7 @@ background-color: white;
 }
 
 #about .left-section {
-    width: 50%;
+    width: 100%;
     float: left;
 }
 
@@ -73,6 +73,19 @@ background-color: white;
     margin: auto;
 }
 
+.option-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.flex {
+    display: inline-flex;
+    width: 50%;
+    font-size: 20px;
+    list-style-type: circle;
+    list-style-position: inside;
+}
 #download {
     color:#006392;
 
@@ -259,6 +272,6 @@ button {
 }
 
 .element {
-    height: 100vh;
+    /*height: 100vh;*/
     scroll-snap-align: start;
 }
