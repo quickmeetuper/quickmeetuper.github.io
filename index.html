@@ -45,9 +45,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="documentation.html">Dokumentacja</a>
                     </li>
-<!--                    <li class="nav-item active">-->
-<!--                        <a class="nav-link" href="#donate">Donate</a>-->
-<!--                    </li>-->
                     <li class="nav-item active">
                         <a class="nav-link" href="#contact">Kontakt</a>
                     </li>
@@ -133,14 +130,11 @@
                             <div>
                                 <a class="button-center" href="documentation.html"><button type="button" class="mb25 btn btn-danger ">Kliknij tutaj, aby zacząć</button></a>
                             </div>
-                            <h3><b>A jeśli chcesz zobaczyć DEMO aplikacji:<b></h3>
+                            <h3><b>A jeśli chcesz zobaczyć DEMO aplikacji:</b></h3>
                             <div>
                                 <a style="width: 160px;" class="button-center" href="https://meetuper-demo.herokuapp.com/"><button type="button" class="mb25 btn btn-danger">Zobacz DEMO</button></a>
                             </div>
                         </div>
-<!--                        <div class="right-section">-->
-
-<!--                         </div>-->
                     </div>
                     </div>
                 </div>
@@ -158,26 +152,15 @@
         </div>
         <div class="element">
             <div id="download" class="container">
-                <div class="container-body">
-                    <h1> </h1>
-                    <button type="button" class="mb25 btn btn-danger">download .exe
-                    </button>
+                <div class="container-body" style="flex-direction: column;">
+                    <h3>Plik do pobrania będzie dostępny w ciągu najbliższych kilku dni:</h3>
+                    <br/>
+                    <div>
+                        <a class="button-center"><button type="button" class="mb25 btn btn-danger">Plik dostępny za kilka dni</button></a>
+                    </div>
                 </div>
             </div>
         </div>
-
-<!--        <div class="element">-->
-<!--            <div id="doc" class="container">-->
-<!--                <a href="documentation.html" type="button" class="mb25 btn btn-danger">go to documentation</a>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="element">-->
-<!--            <div id="donate" class="container">-->
-<!--                <button type="button" class="mb25 btn btn-danger">donate-->
-
-<!--            </div>-->
-<!--        </div>-->
 
         <div class="element">
             <div id="contact" class="container">
@@ -210,7 +193,7 @@
         const init = function () {
             let items = document.getElementsByClassName("element");
             for (let i = 0; i < items.length; i++) {
-                items[i].style.minHeight = gra(100, 100) + "vh";
+                items[i].style.minHeight = gra(items[i].style.height, items[i].style.height) + "vh";
             }
 
             cssScrollSnapPolyfill();

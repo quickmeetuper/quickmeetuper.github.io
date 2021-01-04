@@ -45,9 +45,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="documentation.html">Dokumentacja</a>
                     </li>
-<!--                    <li class="nav-item active">-->
-<!--                        <a class="nav-link" href="index.html#donate">Donate</a>-->
-<!--                    </li>-->
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html#contact">Kontakt</a>
                     </li>
@@ -72,58 +69,7 @@
                      <div class="container-body">
                     <div>
                         <div class="left-section">
-                            <h1>Dokumentacja</h1>
-                            <h2>1. Pobranie plików</h2>
-                            Pobierz zipa. Pózniej trzeba go będzie rozpoakować i wgrac na serwer.<br/>
-                            Znajdują się tam libki które umożliwiają uruchomienie aplikacji na systemie Linux, gdzie wersja Node to 12.<br/>
-                            Poniżej przedstawimy możliwą instalację, korzystając z Heroku (serwera, który udostępnia nam dużo możliwości i przy pomocy Atlas Mongo(bazy danych potrzebnej do działania aplikacji)<br/>
-                            <h2>2. Utworzenie darmowej bazy MongoDb przy pomocy https://account.mongodb.com</h2>
-                            <ul>
-                                <li>
-                                    Tworzymy konto wchodząc na link: <a target="_blank" href="https://account.mongodb.com/account/register">https://account.mongodb.com/account/register</a>
-                                </li>
-                                <li>
-                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierowac jak to zrobić</a>
-                                </li>
-                                <li>Czekamy, aż stworzy się klaster</li>
-                                <li>W zakładce "Clusters" pojawi się nasz nowo stworzony klaster, klikamy w "Collections"</li>
-                                <li>Następnie klikamy "Add my own data", wpisujemy nazwę: "meetuper" i nazwę kolekcji np. "test"</li>
-                                <li>Wchodzimy w zakładkę "Clusters", tam gdzie wcześniej i szukamy zielonego przycisku Connect Cluster i przyciskamy.</li>
-                                <li>Zaznaczamy opcje: "Allow Access From Anywhere"</li>
-                                <li>Tworzymy nowego użytkownika poniżej</li>
-                                <li>Następnie przyciskamy "Choose a connection method"</li>
-                                <li>Wybieramy metodę "Connect your application"</li>
-                                <li>Driver ma być ustawiony na Node, następnie kopiujemy podany link podmieniając "< password>" na wpisane wcześniej hasło i "< dbname>" na nazwę bazy danych: meetuper</li>
-                            </ul>
-                            <h2>2. Utworzenie darmowego konta na Heroku </h2>
-                            <ul>
-                                <li>
-                                    Rejestrujemy się wchodząc na link: <a target="_blank" href="https://signup.heroku.com/">https://signup.heroku.com/</a>. Wypełniamy dane, wybieramy język inny niż podane, ale też to można później zmienić.
-                                </li>
-                                <li>Tworzymy nową aplikację: Create new app</li>
-                                <li>Wpisujemy nazwę aplikacji i klikamy Stwórz</li>
-                                <li>Przechodzimy do zakładki Settings, następnie szukamy przycisku Reveal Config Vars, klikamy</li>
-                                <li>Dodajmey kilka wartości: Key: <b>NODE_ENV</b> Value: <b>production</b><br/>Key: <b>MONGO_URI</b> Value: wklejamy tutaj skopiowany i uzupełniony adres bazy, którą wcześniej utworzyliśmy<br/>
-                                    Key: <b>BUILDPACK_URL</b> Value: <b>https://github.com/ph3nx/heroku-binary-buildpack.git</b><br/>Key: <b>PATH</b> Value: <b>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin</b>
-                                </li>
-                                <li>Następnie przechodzimy do Deployu aplikacji, więc wchodzimy do zakładki Deploy i na początku musimy zainstalować Heroku CLI</li>
-                                <li>przechodzimy kolejne punkty aż przejdziemy do komendy: heroku git:remote -a nazwa-twojej-aplikacji. Wtedy musimy rozpakować pobranego zipa do powstałego folderu(nazwa folderu to nazwa aplikacji). W tym folderze powinień być folder bin i Procfile</li>
-                                <li>Jeżeli już się wszystko zgadza i jest rozpakowane w tym folderze to pądążamy za kolejnymi krokami czyli robimy git add itd. Te kroki mogą trochę zająć czasu</li>
-                                <li>Po tych krokach aplikacja będzie działać</li>
-                                <li>
-                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierowac jak to zrobić</a>
-                                </li>
-                                <li>Czekamy, aż stworzy się klaster</li>
-                            </ul>
-                            Następnie zakładamy konto na heroku, tworzymy sobie nową stronę.<br/>
-                            Ustawiamy sobie Reveal Config: takie jak Path, Node_env, Mongo_URI pobrane z wcześniej utworzonej bazy.<br/>
-                            Ustawiamy buildPacka<br/>
-                            Pobieramy heroku CLI zgodnie z instrukcją:<br/>
-                            Kiedy mamy już folder z naszą aplikacja, tam rozpakowujemy zipa, tak aby w głównym folderze był plik Procfile.<br/>
-                            Wgrywamy tak jak napisano w instrukcji heroku: git add. git commit i git push heroku master<br/>
-                            Ważne żeby przed tym upewnić się że ustawiliśmy BuildPacka i Reveal Config.<br/>
-                            </span>
-
+                            <h3>Dokumentacja będzie dostępna tutaj w ciągu kilku najbliższych dni</h3>
                         </div>
                     </div>
                     </div>

@@ -310,5 +310,5 @@ button {
     scroll-snap-align: start;
 }
 .element.about {
-    height: 240vh;
+    /*height: 240vh;*/
 }
