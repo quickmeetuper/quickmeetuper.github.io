@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <style>
 
@@ -64,66 +65,97 @@
 
 
 
-    <div class="scroll-snap-wrapper">
+    <div>
 
         <div class="element">
             <div id="about-bg">
                 <div id="about" class="container element">
-                     <div class="container-body">
+                     <div class="container-body box-center">
                     <div>
                         <div class="left-section">
                             <h1>Dokumentacja</h1>
-                            <h2>1. Pobranie plików</h2>
-                            Pobierz zipa. Pózniej trzeba go będzie rozpoakować i wgrac na serwer.<br/>
-                            Znajdują się tam libki które umożliwiają uruchomienie aplikacji na systemie Linux, gdzie wersja Node to 12.<br/>
-                            Poniżej przedstawimy możliwą instalację, korzystając z Heroku (serwera, który udostępnia nam dużo możliwości i przy pomocy Atlas Mongo(bazy danych potrzebnej do działania aplikacji)<br/>
-                            <h2>2. Utworzenie darmowej bazy MongoDb przy pomocy https://account.mongodb.com</h2>
+                            <h3>1. Pobranie plików</h3>
+                            Pobierz plik zip poniżej. Pózniej trzeba będzie go rozpakować i wgrać na serwer.<br/><br/>
+                            <form method="get" action="http://meetuper-demo.j.pl/meetuper.zip">
+                                <button type="submit" class="mb25 btn btn-danger">Pobierz meetuper.zip</button>
+                            </form>
+                            W archiwum znajdują się pliki potrzebne do uruchomienia w systemie Linux z Node 12. Dodatkowo znajduje się plik Procfile, który jest potrzebny przy
+                            uruchomieniu aplikacji na serwerze Heroku.<br/><br/>
+                            Poniżej przedstawimy instalację aplikacji na serwerze <a href="https://heroku.com">Heroku</a> i przy wykorzystaniu bazy danych z <a href="https://mongodb.com">https://mongodb.com</a>.<br/>
+                            Do uruchomienia aplikacji potrzebujemy bazę danych MongoDb, później będziemy musieli podać adres tej bazy jako zmienna środowiskowa.
+                            <br/>
+                            <h3>2. Utworzenie darmowej bazy danych MongoDb</h3>
                             <ul>
                                 <li>
-                                    Tworzymy konto wchodząc na link: <a target="_blank" href="https://account.mongodb.com/account/register">https://account.mongodb.com/account/register</a>
+                                    Najpierw tworzymy konto wchodząc na link: <a target="_blank" href="https://account.mongodb.com/account/register">https://account.mongodb.com/account/register</a>
                                 </li>
                                 <li>
-                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierowac jak to zrobić</a>
+                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierować.
                                 </li>
-                                <li>Czekamy, aż stworzy się klaster</li>
-                                <li>W zakładce "Clusters" pojawi się nasz nowo stworzony klaster, klikamy w "Collections"</li>
-                                <li>Następnie klikamy "Add my own data", wpisujemy nazwę: "meetuper" i nazwę kolekcji np. "test"</li>
-                                <li>Wchodzimy w zakładkę "Clusters", tam gdzie wcześniej i szukamy zielonego przycisku Connect Cluster i przyciskamy.</li>
-                                <li>Zaznaczamy opcje: "Allow Access From Anywhere"</li>
-                                <li>Tworzymy nowego użytkownika poniżej</li>
-                                <li>Następnie przyciskamy "Choose a connection method"</li>
-                                <li>Wybieramy metodę "Connect your application"</li>
-                                <li>Driver ma być ustawiony na Node, następnie kopiujemy podany link podmieniając "< password>" na wpisane wcześniej hasło i "< dbname>" na nazwę bazy danych: meetuper</li>
-                            </ul>
-                            <h2>2. Utworzenie darmowego konta na Heroku </h2>
-                            <ul>
-                                <li>
-                                    Rejestrujemy się wchodząc na link: <a target="_blank" href="https://signup.heroku.com/">https://signup.heroku.com/</a>. Wypełniamy dane, wybieramy język inny niż podane, ale też to można później zmienić.
+                                <li>Czekamy, aż stworzy się klaster
+                                    <img class="img-style" src="images/mongoDb.PNG"/>
                                 </li>
-                                <li>Tworzymy nową aplikację: Create new app</li>
-                                <li>Wpisujemy nazwę aplikacji i klikamy Stwórz</li>
-                                <li>Przechodzimy do zakładki Settings, następnie szukamy przycisku Reveal Config Vars, klikamy</li>
-                                <li>Dodajmey kilka wartości: Key: <b>NODE_ENV</b> Value: <b>production</b><br/>Key: <b>MONGO_URI</b> Value: wklejamy tutaj skopiowany i uzupełniony adres bazy, którą wcześniej utworzyliśmy<br/>
-                                    Key: <b>BUILDPACK_URL</b> Value: <b>https://github.com/ph3nx/heroku-binary-buildpack.git</b><br/>Key: <b>PATH</b> Value: <b>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin</b>
-                                </li>
-                                <li>Następnie przechodzimy do Deployu aplikacji, więc wchodzimy do zakładki Deploy i na początku musimy zainstalować Heroku CLI</li>
-                                <li>przechodzimy kolejne punkty aż przejdziemy do komendy: heroku git:remote -a nazwa-twojej-aplikacji. Wtedy musimy rozpakować pobranego zipa do powstałego folderu(nazwa folderu to nazwa aplikacji). W tym folderze powinień być folder bin i Procfile</li>
-                                <li>Jeżeli już się wszystko zgadza i jest rozpakowane w tym folderze to pądążamy za kolejnymi krokami czyli robimy git add itd. Te kroki mogą trochę zająć czasu</li>
-                                <li>Po tych krokach aplikacja będzie działać</li>
-                                <li>
-                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierowac jak to zrobić</a>
-                                </li>
-                                <li>Czekamy, aż stworzy się klaster</li>
-                            </ul>
-                            Następnie zakładamy konto na heroku, tworzymy sobie nową stronę.<br/>
-                            Ustawiamy sobie Reveal Config: takie jak Path, Node_env, Mongo_URI pobrane z wcześniej utworzonej bazy.<br/>
-                            Ustawiamy buildPacka<br/>
-                            Pobieramy heroku CLI zgodnie z instrukcją:<br/>
-                            Kiedy mamy już folder z naszą aplikacja, tam rozpakowujemy zipa, tak aby w głównym folderze był plik Procfile.<br/>
-                            Wgrywamy tak jak napisano w instrukcji heroku: git add. git commit i git push heroku master<br/>
-                            Ważne żeby przed tym upewnić się że ustawiliśmy BuildPacka i Reveal Config.<br/>
-                            </span>
 
+                                <li>W zakładce <b>"Clusters"</b> pojawi się nasz nowo stworzony klaster, klikamy w <b>"Collections"</b> (zaznaczono na powyższej grafice)</li>
+                                <li>Następnie tworzymy nową bazę: klikamy <b>"Add my own data"</b>, wpisujemy nazwę: "meetuper" i nazwę kolekcji np. "test"</li>
+                                <li>Wchodzimy w zakładkę <b>"Clusters"</b>, tam gdzie wcześniej i szukamy zielonego przycisku <b>"Connect Cluster"</b>(zaznaczono na powyższej grafice) i klikamy.</li>
+                                <li>Klikamy opcje: <b>"Allow Access From Anywhere"</b></li>
+                                <li>Tworzymy nowego użytkownika poniżej np. o nazwie użytkownika "admin". Zapamiętujemy te dane, później będziemy musieli uzupełnić tymi danymi link do naszej bazy</li>
+                                <li>Następnie przyciskamy <b>"Choose a connection method"</b></li>
+                                <li>Wybieramy metodę <b>"Connect your application"</b></li>
+                                <li>Odznaczamy opcję <b>"Include full driver code example"</b> tak jak na poniższej grafice
+                                    <img class="img-style" src="images/mongoDb2.PNG"/>
+                                </li>
+                                <li>Kopiujemy podany link podmieniając <b>"< password>"</b> na wpisane wcześniej hasło i <b>"< dbname>"</b> na nazwę bazy danych: <b>meetuper</b></li>
+                            </ul>
+                            <h3>3. Zainstalowanie aplikacji na darmowym serwerze Heroku</h3>
+                            <ul>
+                                <li>
+                                    Rejestrujemy się wchodząc na link: <a target="_blank" href="https://signup.heroku.com/">https://signup.heroku.com/</a>
+                                </li>
+                                <li>Tworzymy nową aplikację: <b>"Create new app"</b></li>
+                                <li>Wpisujemy nazwę aplikacji i klikamy <b>"Create app"</b></li>
+                                <li>Przechodzimy do zakładki <b>"Settings"</b>, następnie klikamy przycisk <b>"Reveal Config Vars"</b> pokazany poniżej:
+                                    <img class="img-style" src="images/heroku1.png"/>
+                                </li>
+                                <li>Dodajemy kilka wartości: <br/>Key: <b>NODE_ENV</b> Value: <b>production</b><br/>Key: <b>MONGO_URI</b> Value: wklejamy tutaj skopiowany i uzupełniony adres bazy, którą wcześniej utworzyliśmy<br/>
+                                    Key: <b>BUILDPACK_URL</b> Value: <b>https://github.com/ph3nx/heroku-binary-buildpack.git</b><br/>Key: <b>PATH</b> Value: <b>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin</b>
+                                    Ostatecznie powinno to mniej więcej tak wyglądać:
+                                    <img class="img-style" src="images/heroku2.png"/>
+                                    Tutaj zostały jeszcze dodane takie zmienne środowiskowe jak <b>TWILIO_ACCOUNT_SID</b> i <b>TWILIO_AUTH_TOKEN</b>. Więcej o nich w <b>czwartym punkcie dokumentacji</b>.
+                                    Jest to potrzebne, aby kamerki działały praktycznie <b>zawsze</b> poprawnie.
+                                    Do tego potrzebny jest zewnętrzny serwer, który ustanawia stabilne połączenie. Ta aplikacja korzysta z serwera <b>TWILIO</b>.
+                                    Można sobie założyć konto, gdzie jest duża darmowa pula połączeń i wpisać odpowiednio jak powyżej na grafice.
+                                </li>
+                                <li>Następnie przechodzimy do zakładki <b>"Deploy"</b> na Heroku i na początku musimy zainstalować <a href="https://devcenter.heroku.com/articles/heroku-cli">Heroku CLI</a></li>
+                                <li>Jeśli uda nam sie zalogować na swoim komputerze do Heroku, przechodzimy przez kolejne punkty:
+                                    <img class="img-style" src="images/heroku3.png"/>
+                                    Czyli najpierw tworzymy folder o nazwie aplikacji. W konsoli przechodzimy do tego folderu i wykonujemy komende: <b>heroku git:remote -a twoja_nazwa_aplikacji</b><br/>
+                                    Następnie musimy rozpakować pobrany plik meetuper.zip do utworzonego folderu.
+                                    Po rozpakowaniu w tym folderze powinien być folder <b>bin</b> i plik <b>Procfile</b></li>
+                                <li>Następnie wykonujemy w tym folderze poniższe komendy: (komendy te będą się wykonywały chwilę, ponieważ wgrywane pliki są duże)
+                                    <img class="img-style" src="images/heroku4.png"/>
+
+                                </li>
+                                <li>Jeżeli wszystko zakończy się sukcesem, powinniśmy mieć działającą aplikację. Możemy to sprawdzić wchodząc na link <b>twoja_nazwa_aplikacji.herokuapp.com</b></li>
+                            </ul>
+                                W przypadku problemów prosimy o kontakt mailowy <b>ekipa.melansz@gmail.com</b> lub przez stronę na facebooku
+                                    <a href="https://www.facebook.com/Quick-MeetUper-100364615331405" target="_blank">MeetUper</a><br/><br/>
+                            <h3>4. Utworzenie konta TWILIO dla stabilnego działania kamerek</h3>
+                            <ul>
+                                <li>
+                                    Rejestrujemy się na stronie: <a target="_blank" href="https://twilio.com/">https://twilio.com/</a>
+                                </li>
+                                <li>
+                                    Pierwszej zakładce po zalogowaniu <b>"Dashboard"</b> będziemy mieć <b>"Project info"</b>:
+                                    <img class="img-style" src="images/twilio.png"/>
+                                </li>
+                                <li>
+                                    Przechodzimy do zakładki <b>"Settings"</b> na Heroku, klikamy <b>"Reveal Config Vars"</b> i dodajemy nowe pola:<br/>
+                                    Key: <b>TWILIO_ACCOUNT_SID</b> Value: kopiujemy wartość z Twilio <b>ACCOUNT_SID</b> z <b>"Project Info"</b> pokazanego na powyższej grafice<br/>
+                                    Key: <b>TWILIO_AUTH_TOKEN</b> Value: kopiujemy wartość z Twilio <b>AUTH_TOKEN</b> z <b>"Project Info"</b> pokazanego na powyższej grafice
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     </div>
