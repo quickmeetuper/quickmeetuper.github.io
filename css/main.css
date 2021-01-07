@@ -100,6 +100,22 @@ background-color: white;
     list-style: circle;
     list-style-position: inside;
 }
+
+@media (max-width: 573px) {
+    .option-container {
+        flex-direction: column;
+    }
+    .flex {
+        width: 100%;
+    }
+    .title {
+        font-size:4em !important;
+    }
+    .desc {
+        width: 350px;
+    }
+}
+
 #download {
     color:#006392;
 
@@ -146,6 +162,7 @@ background-color: white;
 #contact {
     color: #006392;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;

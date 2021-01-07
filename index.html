@@ -45,9 +45,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="documentation.html">Dokumentacja</a>
                     </li>
-<!--                    <li class="nav-item active">-->
-<!--                        <a class="nav-link" href="#donate">Donate</a>-->
-<!--                    </li>-->
                     <li class="nav-item active">
                         <a class="nav-link" href="#contact">Kontakt</a>
                     </li>
@@ -68,7 +65,7 @@
             <div id="home-bg">
                 <div id="home" class="container" style="height: 100vh !important;">
                     <div id="animated-example" class="animated fadeInRight">
-                        <p style="color: white;
+                        <p class="title" style="color: white;
                         font-family: 'Mina', Sans-serif;
                         font-size: 6em;
                         font-weight: 800;
@@ -78,21 +75,21 @@
                         ">
                             MeetUper
                         <p>
-                        <p style="color: white;
+                        <p class="desc" style="color: white;
                         font-family: 'Mina', Sans-serif;
                         font-size: 1.7em;
                         font-weight: 400;
                         font-style: normal;
                         letter-spacing: 0px;
                             ">
-                            Simple and freee - online video chat App
+                            Aplikacja do organizacji różnorakich spotkań online
                         </p>
                     </div>
 
                     <div style="display: inline-grid;">
                         <a href="documentation.html"><button type="button" class="mb25 btn btn-danger">Zobacz dokumentację
                         </button></a>
-                        <a href="https://meetuper-demo.herokuapp.com/"><button type="button" class="btn mb25 btn-danger">Wypróbuj teraz
+                        <a href="https://meetuper-demo.herokuapp.com/"><button type="button" class="btn mb25 btn-danger">Sprawdź DEMO teraz
                         </button></a>
                     </div>
                 </div>
@@ -133,14 +130,11 @@
                             <div>
                                 <a class="button-center" href="documentation.html"><button type="button" class="mb25 btn btn-danger ">Kliknij tutaj, aby zacząć</button></a>
                             </div>
-                            <h3><b>A jeśli chcesz zobaczyć DEMO aplikacji:<b></h3>
+                            <h3><b>A jeśli chcesz zobaczyć DEMO aplikacji:</b></h3>
                             <div>
                                 <a style="width: 160px;" class="button-center" href="https://meetuper-demo.herokuapp.com/"><button type="button" class="mb25 btn btn-danger">Zobacz DEMO</button></a>
                             </div>
                         </div>
-<!--                        <div class="right-section">-->
-
-<!--                         </div>-->
                     </div>
                     </div>
                 </div>
@@ -158,32 +152,30 @@
         </div>
         <div class="element">
             <div id="download" class="container">
-                <div class="container-body">
-                    <h1> </h1>
-                    <form method="get" action="http://meetuper-demo.j.pl/meetuper.zip">
-                    <button type="submit" class="mb25 btn btn-danger">download .exe
+                <div class="container-body" style="flex-direction: column;">
+                    <h3>Plik do pobrania jest już <b>DOSTĘPNY</b>:</h3>
+                    <br/>
+                    <div>
+                        <a class="button-center">
+                        <form method="get" action="http://meetuper-download.j.pl/meetuper.zip">
+                    <button type="submit" class="mb25 btn btn-danger">Pobierz MeetUper
                     </button>
                     </form>
+                    </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-<!--        <div class="element">-->
-<!--            <div id="doc" class="container">-->
-<!--                <a href="documentation.html" type="button" class="mb25 btn btn-danger">go to documentation</a>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="element">-->
-<!--            <div id="donate" class="container">-->
-<!--                <button type="button" class="mb25 btn btn-danger">donate-->
-
-<!--            </div>-->
-<!--        </div>-->
-
         <div class="element">
             <div id="contact" class="container">
-                <h1> ekipa.melansz@gmail.com</h1>
+                <h2>Email: ekipa.melansz@gmail.com</h2>
+                <div>
+                <h2>Facebook: <a href="https://www.facebook.com/MeetUper-100364615331405/" target="_blank">
+                        <i class="fa fa-facebook-square" style="font-size:42px; color:#006392"></i>
+                    </a>
+                </h2>
+                </div>
             </div>
         </div>
 
@@ -212,7 +204,7 @@
         const init = function () {
             let items = document.getElementsByClassName("element");
             for (let i = 0; i < items.length; i++) {
-              items[i].style.minHeight = gra(items[i].style.height, items[i].style.height) + "vh";
+                items[i].style.minHeight = gra(items[i].style.height, items[i].style.height) + "vh";
             }
 
             cssScrollSnapPolyfill();

@@ -46,9 +46,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="documentation.html">Dokumentacja</a>
                     </li>
-<!--                    <li class="nav-item active">-->
-<!--                        <a class="nav-link" href="index.html#donate">Donate</a>-->
-<!--                    </li>-->
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html#contact">Kontakt</a>
                     </li>
@@ -75,14 +72,15 @@
                         <div class="left-section">
                             <h1>Dokumentacja</h1>
                             <h3>1. Pobranie plików</h3>
-                            Pobierz plik zip poniżej. Pózniej trzeba będzie go rozpakować i wgrać na serwer.<br/><br/>
-                            <form method="get" action="http://meetuper-demo.j.pl/meetuper.zip">
-                                <button type="submit" class="mb25 btn btn-danger">Pobierz meetuper.zip</button>
+                            Pobierz plik zip poniżej. Później trzeba będzie go rozpakować i wgrać na serwer.<br/><br/>
+                            <form method="get" action="http://meetuper-download.j.pl/meetuper.zip">
+                                <button type="submit" class="mb25 btn btn-danger">Pobierz MeetUper</button>
                             </form>
                             W archiwum znajdują się pliki potrzebne do uruchomienia w systemie Linux z Node 12. Dodatkowo znajduje się plik Procfile, który jest potrzebny przy
                             uruchomieniu aplikacji na serwerze Heroku.<br/><br/>
-                            Poniżej przedstawimy instalację aplikacji na serwerze <a href="https://heroku.com">Heroku</a> i przy wykorzystaniu bazy danych z <a href="https://mongodb.com">https://mongodb.com</a>.<br/>
-                            Do uruchomienia aplikacji potrzebujemy bazę danych MongoDb, później będziemy musieli podać adres tej bazy jako zmienna środowiskowa.
+                            Poniżej przedstawiamy instalację aplikacji na serwerze <a href="https://heroku.com">Heroku</a> i przy wykorzystaniu bazy danych <a href="https://mongodb.com">https://mongodb.com</a>.<br/>
+                            Do uruchomienia aplikacji potrzebujemy bazę danych MongoDb, dlatego zaczniemy od jej stworzenia.
+                            <br/>
                             <br/>
                             <h3>2. Utworzenie darmowej bazy danych MongoDb</h3>
                             <ul>
@@ -90,7 +88,7 @@
                                     Najpierw tworzymy konto wchodząc na link: <a target="_blank" href="https://account.mongodb.com/account/register">https://account.mongodb.com/account/register</a>
                                 </li>
                                 <li>
-                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierować.
+                                    Po utworzeniu konta, tworzymy darmowy klaster. Strona powinna nas pokierować krok po kroku.
                                 </li>
                                 <li>Czekamy, aż stworzy się klaster
                                     <img class="img-style" src="images/mongoDb.PNG"/>
@@ -100,8 +98,8 @@
                                 <li>Następnie tworzymy nową bazę: klikamy <b>"Add my own data"</b>, wpisujemy nazwę: "meetuper" i nazwę kolekcji np. "test"</li>
                                 <li>Wchodzimy w zakładkę <b>"Clusters"</b>, tam gdzie wcześniej i szukamy zielonego przycisku <b>"Connect Cluster"</b>(zaznaczono na powyższej grafice) i klikamy.</li>
                                 <li>Klikamy opcje: <b>"Allow Access From Anywhere"</b></li>
-                                <li>Tworzymy nowego użytkownika poniżej np. o nazwie użytkownika "admin". Zapamiętujemy te dane, później będziemy musieli uzupełnić tymi danymi link do naszej bazy</li>
-                                <li>Następnie przyciskamy <b>"Choose a connection method"</b></li>
+                                <li>Następnie tworzymy nowego użytkownika np. o nazwie użytkownika "admin". Zapamiętujemy te dane, później będziemy musieli uzupełnić tymi danymi link do naszej bazy</li>
+                                <li>Potem klikamy <b>"Choose a connection method"</b></li>
                                 <li>Wybieramy metodę <b>"Connect your application"</b></li>
                                 <li>Odznaczamy opcję <b>"Include full driver code example"</b> tak jak na poniższej grafice
                                     <img class="img-style" src="images/mongoDb2.PNG"/>
@@ -115,14 +113,14 @@
                                 </li>
                                 <li>Tworzymy nową aplikację: <b>"Create new app"</b></li>
                                 <li>Wpisujemy nazwę aplikacji i klikamy <b>"Create app"</b></li>
-                                <li>Przechodzimy do zakładki <b>"Settings"</b>, następnie klikamy przycisk <b>"Reveal Config Vars"</b> pokazany poniżej:
+                                <li>Przechodzimy do zakładki <b>"Settings"</b>, klikamy przycisk <b>"Reveal Config Vars"</b> pokazany poniżej:
                                     <img class="img-style" src="images/heroku1.png"/>
                                 </li>
                                 <li>Dodajemy kilka wartości: <br/>Key: <b>NODE_ENV</b> Value: <b>production</b><br/>Key: <b>MONGO_URI</b> Value: wklejamy tutaj skopiowany i uzupełniony adres bazy, którą wcześniej utworzyliśmy<br/>
                                     Key: <b>BUILDPACK_URL</b> Value: <b>https://github.com/ph3nx/heroku-binary-buildpack.git</b><br/>Key: <b>PATH</b> Value: <b>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin</b>
-                                    Ostatecznie powinno to mniej więcej tak wyglądać:
+                                    <br/>Ostatecznie powinno to mniej więcej tak wyglądać:
                                     <img class="img-style" src="images/heroku2.png"/>
-                                    Tutaj zostały jeszcze dodane takie zmienne środowiskowe jak <b>TWILIO_ACCOUNT_SID</b> i <b>TWILIO_AUTH_TOKEN</b>. Więcej o nich w <b>czwartym punkcie dokumentacji</b>.
+                                    Tutaj zostały jeszcze dodane takie wartości jak <b>TWILIO_ACCOUNT_SID</b> i <b>TWILIO_AUTH_TOKEN</b>. Więcej o nich w <b>czwartym punkcie dokumentacji</b>.
                                     Jest to potrzebne, aby kamerki działały praktycznie <b>zawsze</b> poprawnie.
                                     Do tego potrzebny jest zewnętrzny serwer, który ustanawia stabilne połączenie. Ta aplikacja korzysta z serwera <b>TWILIO</b>.
                                     Można sobie założyć konto, gdzie jest duża darmowa pula połączeń i wpisać odpowiednio jak powyżej na grafice.
@@ -142,6 +140,9 @@
                                 W przypadku problemów prosimy o kontakt mailowy <b>ekipa.melansz@gmail.com</b> lub przez stronę na facebooku
                                     <a href="https://www.facebook.com/Quick-MeetUper-100364615331405" target="_blank">MeetUper</a><br/><br/>
                             <h3>4. Utworzenie konta TWILIO dla stabilnego działania kamerek</h3>
+                            Aby użytkownicy łączyli się przez kamerki bez problemów, trzeba zarejestrować się na Twilio. Poniżej instrukcja.<br/>
+                            Jeśli nie chcemy korzystać z Twilio, najlepiej aby użytkownicy łączyli się ze sobą za pomocą przeglądarki Google Chrome w wersji komputerowej, ponieważ
+                            tam najlepiej to działa i rzadko zdarzają się problemy.
                             <ul>
                                 <li>
                                     Rejestrujemy się na stronie: <a target="_blank" href="https://twilio.com/">https://twilio.com/</a>
@@ -165,7 +166,12 @@
 
         <div class="element">
             <div id="contact" class="container">
-                <h1> ekipa.melansz@gmail.com</h1>
+                <h2>Email: ekipa.melansz@gmail.com</h2>
+                <div>
+                    <h2>Facebook: <a href="https://www.facebook.com/MeetUper-100364615331405/" target="_blank">
+                        <i class="fa fa-facebook-square" style="font-size:42px; color:#006392"></i>
+                    </a>
+                    </h2>
             </div>
         </div>
 
